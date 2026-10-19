@@ -11,10 +11,32 @@ probably work the same way.
 ## Requirements
 
 - Linux with BlueZ and `bluetoothctl`
-- Go 1.26 or later, to build
+- Go 1.26 or later, only to build from source
 - The buds paired and connected
 
 ## Install
+
+Use one of these options.
+
+### mise
+
+Install the prebuilt binary from the GitHub releases (Linux amd64 and arm64):
+
+```bash
+mise use -g github:hamidriaz1998/peats
+```
+
+If your mise config sets `minimum_release_age`, mise hides a new release until
+it is old enough. To install a specific release now, add its version, for
+example `github:hamidriaz1998/peats@0.1.0`.
+
+### Release archive
+
+Download `peats_<version>_linux_<arch>.tar.gz` from the
+[releases page](https://github.com/hamidriaz1998/peats/releases), extract it,
+and put `peats` in a directory on your `PATH`.
+
+### Go
 
 ```bash
 go install github.com/hamidriaz1998/peats@latest
